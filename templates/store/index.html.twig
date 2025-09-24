@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body {
+            background: linear-gradient(135deg, #fdecffff 0%, #fdecffff 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .homepage-container {
+            max-width: 1400px;
+            margin: 10px auto;
+            background: #ffbebeff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+            padding: 40px 32px 32px 32px;
+            text-align: center;
+        }
+        .homepage-container h1 {
+            color: #C10016;
+            font-size: 2.5rem;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .homepage-container p {
+            color: #000000ff;
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+        }
+        nav {
+            margin-top: 24px;
+        }
+        nav a {
+            color: #ffffffff
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 14px;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #a78bfa;
+            text-decoration: underline;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="homepage-container">
+        <h1>{{ title }}</h1>
+        <p>Discover the latest fashion trends at <strong>VeraBelle Collection</strong>.</p>
+
+        <nav>
+            <a href="{{ path('store_home') }}">Home</a> |
+            <a href="{{ path('store_shop') }}">Shop</a> |
+            <a href="{{ path('store_contact') }}">Contact</a>
+        </nav>
+    </div>
+{% endblock %}
